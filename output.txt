@@ -1,0 +1,41 @@
+Stack: ['$', 'E']  Input: (a +a )*a$  Action: E -> TQ
+Stack: ['$', 'Q', 'T']  Input: (a +a )*a$  Action: T -> FR
+Stack: ['$', 'Q', 'R', 'F']  Input: (a +a )*a$  Action: F -> (E)
+Stack: ['$', 'Q', 'R', ')', 'E', '(']  Input: (a +a )*a$  Action: match (
+Stack: ['$', 'Q', 'R', ')', 'E']  Input: a +a )*a$  Action: E -> TQ
+Stack: ['$', 'Q', 'R', ')', 'Q', 'T']  Input: a +a )*a$  Action: T -> FR
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'F']  Input: a +a )*a$  Action: F -> a
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'a']  Input: a +a )*a$  Action: match a
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R']  Input:  +a )*a$  Action: error
+Rejected
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'E']  Input: a*(a/a)$  Action: E -> TQ
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'T']  Input: a*(a/a)$  Action: T -> FR
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', 'F']  Input: a*(a/a)$  Action: F -> a
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', 'a']  Input: a*(a/a)$  Action: match a
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R']  Input: *(a/a)$  Action: R -> *FR
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', 'F', '*']  Input: *(a/a)$  Action: match *
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', 'F']  Input: (a/a)$  Action: F -> (E)
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', ')', 'E', '(']  Input: (a/a)$  Action: match (
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', ')', 'E']  Input: a/a)$  Action: E -> TQ
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', ')', 'Q', 'T']  Input: a/a)$  Action: T -> FR
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', ')', 'Q', 'R', 'F']  Input: a/a)$  Action: F -> a
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', ')', 'Q', 'R', 'a']  Input: a/a)$  Action: match a
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', ')', 'Q', 'R']  Input: /a)$  Action: R -> /FR
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', ')', 'Q', 'R', 'F', '/']  Input: /a)$  Action: match /
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', ')', 'Q', 'R', 'F']  Input: a)$  Action: F -> a
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', ')', 'Q', 'R', 'a']  Input: a)$  Action: match a
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', ')', 'Q', 'R']  Input: )$  Action: R -> ε
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', ')', 'Q']  Input: )$  Action: Q -> ε
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R', ')']  Input: )$  Action: match )
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q', 'R']  Input: $  Action: R -> ε
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'Q']  Input: $  Action: Q -> ε
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R']  Input: $  Action: R -> ε
+Stack: ['$', 'Q', 'R', ')', 'Q']  Input: $  Action: Q -> ε
+Stack: ['$', 'Q', 'R', ')']  Input: $  Action: error
+Rejected
+Stack: ['$', 'Q', 'R', ')', 'E']  Input: a(a+a)$  Action: E -> TQ
+Stack: ['$', 'Q', 'R', ')', 'Q', 'T']  Input: a(a+a)$  Action: T -> FR
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'F']  Input: a(a+a)$  Action: F -> a
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R', 'a']  Input: a(a+a)$  Action: match a
+Stack: ['$', 'Q', 'R', ')', 'Q', 'R']  Input: (a+a)$  Action: error
+Rejected

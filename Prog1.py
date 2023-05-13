@@ -19,7 +19,7 @@ table = {
 
 stack = ['$']
 
-input_str1 = '(a +a )*a'
+input_str1 = '(a+a)*a'
 
 input_str2 = 'a*(a/a)'
 
